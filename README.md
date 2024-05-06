@@ -98,16 +98,17 @@ Upon reviewing Event Code 4624, the network information lists the Kali VM and it
 
 ![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/967cb242-37aa-4c1d-af5b-7b29453e085c)
 
-5. I installed AtomicRedTeam on TARGET-PC via Powershell:
+### ATOMIC RED TEAM
+1. I installed AtomicRedTeam on TARGET-PC via Powershell:
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/7815a2da-61ba-4a33-ba6f-6cd48893a39a)
 
 AtomicRedTeam runs techniques from the MITRE ATT&CK framework in Powershell and are logged in Splunk for review.  I went to https://attack.mitre.org/ and selected a few to test.
 
-5a. Create Account - Local Account -T1136.001 
+1a. Create Account - Local Account -T1136.001 
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/5cf15f71-03af-41ec-bcd5-aa116dc988e9)
 
-5b. Command and Scripting Interpreter - Powershell - T1059.001
+1b. Command and Scripting Interpreter - Powershell - T1059.001
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/55922047-18b0-494c-af45-fe7caa94dab8)
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/20ab8949-dcbf-4409-b017-9a2bef2eab92)
@@ -121,13 +122,13 @@ This script was also being picked up by Windows Defender in real-time.
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/5baeb3e4-cf6b-4631-a634-97b49071acc3)
 
 
-6. I then reviewed the AtomicRedTeam generated telemetry in Splunk:
+2. I then reviewed the AtomicRedTeam generated telemetry in Splunk:
 
-6a. From Create Account - Local Account -T1136.001 
+2a. From Create Account - Local Account -T1136.001 
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/4f80bd3a-915a-49a8-8241-818f0a2f9e0f)
 
-6b. From Command and Scripting Interpreter - Powershell - T1059.001
+2b. From Command and Scripting Interpreter - Powershell - T1059.001
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/2c0978bc-66b0-4b9c-b552-ac97cc294d76)
 
