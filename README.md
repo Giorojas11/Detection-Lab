@@ -99,7 +99,9 @@ Upon reviewing Event Code 4624, the network information lists the Kali VM and it
 ![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/967cb242-37aa-4c1d-af5b-7b29453e085c)
 
 ### ATOMIC RED TEAM
+
 1. I installed AtomicRedTeam on TARGET-PC via Powershell:
+   
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/7815a2da-61ba-4a33-ba6f-6cd48893a39a)
 
 AtomicRedTeam runs techniques from the MITRE ATT&CK framework in Powershell and are logged in Splunk for review.  I went to https://attack.mitre.org/ and selected a few to test.
