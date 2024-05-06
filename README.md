@@ -27,13 +27,13 @@ The Detection Lab project aimed to establish a controlled environment for simula
 
 ![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/0ec0ba49-1c72-4e1c-af57-137d9adbe2bb)
 
-SPLUNK SERVER (Ubuntu)
+#### SPLUNK SERVER (Ubuntu)
 1. Added host directory containing Splunk Enterprise via Hypervisor > created a shared directory between Host and VM
 2. Ran Splunk from Share directory > changed to Splunk user > Ran Splunk license agreement and installer from Bin
 3. Set server to run Splunk on boot with user "Splunk"
 4. Confirmed Splunk server was reachable from Target-PC using Splunk Server's IP:8000
 
-TARGET-PC (Windows 10)
+#### TARGET-PC (Windows 10)
 1. Installed Splunk Universal Forwarder and Sysmon with an Olaf sysmonconfig file from Github
 2. Ran Sysmon with config file from Powershell
 3. Created an inputs.conf file:
@@ -72,7 +72,7 @@ NOTE: This file tells Splunk Forwarder what information will be pushed to the Sp
 4. Services > Splunk Forwarder > Restarted service (NOTE: Splunk Forwarder needs to be restarted after every inputs.conf change made).
 5. Created an enpoint index in Splunk so info can be received, added a receiving port of 9997, confirmed information is being sent from Target-PC to the Splunk server.
 
-AD SERVER
+#### AD SERVER
 1. Repeated Steps 1-4 from TARGET-PC
 2. Confirmed traffic is flowing from AD server to Splunk server
 3. Server Manager > Manage > Installed and configured Active Directory Domain Services
@@ -98,15 +98,27 @@ Upon reviewing Event Code 4624, the network information lists the Kali VM and it
 
 ![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/967cb242-37aa-4c1d-af5b-7b29453e085c)
 
-5. I installed AtomicRedTeam via Powershell using:
+5. I installed AtomicRedTeam on TARGET-PC via Powershell:
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/7815a2da-61ba-4a33-ba6f-6cd48893a39a)
 
-![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/0924ad02-4774-4b55-9dbe-6600fc4e9947)
+AtomicRedTeam runs techniques from the MITRE ATT&CK framework in Powershell and are logged in Splunk for review.  I went to https://attack.mitre.org/ and selected a few to test.
 
-AtomicRedTeam installs techniques from the MITRE ATT&CK framework. These run in Powershell and are logged in Splunk for review. I went to https://attack.mitre.org/ and selected a few to test.
-5a. Create Account - Local Account -T1136.001
-![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/6713fde6-62db-49e0-add6-e78d47f53392)
+5a. Create Account - Local Account -T1136.001 
+
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/5cf15f71-03af-41ec-bcd5-aa116dc988e9)
 
 5b. Command and Scripting Interpreter - Powershell - T1059.001
-![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/5b4f18ec-0c75-4030-8c91-9a200c9cc0c4)
 
-6. I then reviewed the AtomicRedTeam generated events in Splunk. 
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/55922047-18b0-494c-af45-fe7caa94dab8)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/20ab8949-dcbf-4409-b017-9a2bef2eab92)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/d688bc5d-354f-46bc-ae2c-2213243814ed)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/d9ab21ad-7080-4a80-8aef-5869003bb484)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/73aff2d4-e2f1-48cf-baa5-7fc6ec7c47a2)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/4a9cfed6-3aaf-455c-8aad-8914bbf9b82a)
+
+This script was also being picked up by Windows Defender in real-time.
+
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/5baeb3e4-cf6b-4631-a634-97b49071acc3)
+
+
+6. I then reviewed the AtomicRedTeam generated telemetry in Splunk: 
