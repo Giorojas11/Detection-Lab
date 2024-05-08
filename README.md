@@ -25,7 +25,7 @@ The Detection Lab project aimed to establish a controlled environment for simula
 
 *Ref 1: Network Diagram*
 
-![image](https://github.com/Giorojas11/SOC_Lab/assets/98496056/0ec0ba49-1c72-4e1c-af57-137d9adbe2bb)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/0ec0ba49-1c72-4e1c-af57-137d9adbe2bb)
 
 #### SPLUNK SERVER (Ubuntu)
 1. Added host directory containing Splunk Enterprise via Hypervisor > created a shared directory between Host and VM
