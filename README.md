@@ -151,4 +151,4 @@ This script was also being picked up by Windows Security in real-time.
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/2c0978bc-66b0-4b9c-b552-ac97cc294d76)
 
 ## Conclusion
-With this virtual environment, I can practice Red Team (attack simulation) while simultaneously practicing Blue Team (log analysis on SIEM). My plan is to expand this homelab and continue simulating attacks and playing around with the SIEM to practice to gain hand-on experience in prepration for a SOC Analyst role. More to come.
+With this virtual environment, I can practice Red Team (attack simulation) while simultaneously practicing Blue Team (log analysis on SIEM). My plan is to expand this homelab and continue simulating attacks and playing around with the SIEM to practice to gain hand-on experience in prepration for a SOC Analyst role.
