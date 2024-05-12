@@ -37,7 +37,7 @@ The Detection Lab project aimed to establish a controlled environment for simula
 2. Ran *sudo nano /etc/netplan/TAB* and *sudo netplan apply* to assign a static IP address, the google DNS, and a default route for internet access.
 3. Confirmed network configuration via *ip a* and tested network connectivity via *ping 8.8.8.8*.
 
- ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/263999b3-2b24-4994-baee-52e7b3359640)
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/53b5c9fc-496c-40f6-9c1e-df991c66b559)
 
 4. Created a shared folder directory for Splunk Enterprise using the Shared Folder feature on Virtualbox. 
 5. I installed virtualbox add-ons (virtualbox-guest-additions-iso and virtualbox-guest-utils) via *sudo apt-get install* commands. I added my user account to the group with the shared folder.
