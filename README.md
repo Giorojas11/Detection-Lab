@@ -25,9 +25,9 @@ The Detection Lab project aimed to establish a controlled environment for simula
 
 #### Network
 
-*Ref 1: Network Diagram*
+![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/7f86e731-524e-419f-8b8f-f3c13a8e0007)
 
-![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/8cbd4c23-a7e1-40a2-b2f3-86827a99c92b)
+*Ref 1: Network Diagram*
 
 ### SERVER SETUP 
 
