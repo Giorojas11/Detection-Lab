@@ -121,7 +121,7 @@ Upon reviewing Event Code 4624, the network information lists the Kali VM and it
    
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/7815a2da-61ba-4a33-ba6f-6cd48893a39a)
 
-AtomicRedTeam runs tactics, techniques, & procedures (TTPs) from the MITRE ATT&CK framework from a device's Powershell and are logged in Splunk for review.  I went to https://attack.mitre.org/ and selected a few to test.
+AtomicRedTeam runs tactics, techniques, & procedures (TTPs) from the MITRE ATT&CK framework in Powershell. This generates telemetry in Splunk.  I went to https://attack.mitre.org/ and selected a few to test.
 
 1a. Create Account - Local Account -T1136.001 
 
@@ -140,7 +140,7 @@ This script was also being picked up by Windows Security in real-time.
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/5baeb3e4-cf6b-4631-a634-97b49071acc3)
 
-2. I then reviewed the AtomicRedTeam generated telemetry in Splunk:
+2. I reviewed the telemetry generated from AtomicRedTeam in Splunk:
 
 2a. From Create Account - Local Account -T1136.001 
 
