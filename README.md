@@ -87,7 +87,7 @@ source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 
 4. Services > Splunk Forwarder > Restarted service
    *NOTE: Splunk Forwarder needs to be restarted after every inputs.conf change made*
-6. Created an 'enpoint' index in Splunk so info can be received, added a receiving port of 9997, added the Target-PC to the index, and confirmed information is being sent from Target-PC to the Splunk server.
+6. Created an 'endpoint' index in Splunk so info can be received, added a receiving port of 9997, added the Target-PC to the index, and confirmed information is being sent from Target-PC to the Splunk server.
 
 #### AD/DC SERVER
 1. Repeated Steps 1-4 from TARGET-PC.
@@ -102,12 +102,12 @@ source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 *The Scenario*: The attacker was able to tailgate into SOC's office site and proceed by doing some reconnaissance. An active ethernet port was found allowing the attacker to connect to the office network. John Smith, a new IT employee for SOC, has RDP privileges for their job-role. Being a new employee, John was given a simple password that needed to be manually changed as soon as possible.
 
 1. On my Kali Linux VM, I installed Crowbar, a brute force tool.
-2. I created a soc_project directory on the desktop, pulled the rockyou.txt and copied it to the directory as a new file, passwords.txt. I added the password that is used by John Smith's useer account in the SOC domain. In this attack scenario, the attacker did reconnaissance and was able to gain John Smith's password.
-3. I ran the following command and was able to get successfully get John's username and password.
+2. I created a soc_project directory on the desktop, pulled the rockyou.txt and copied it to the directory as a new file, passwords.txt. I added the password that is used by John Smith's user account in the SOC domain. In this attack scenario, the attacker was able to gain John Smith's password.
+3. I ran the following command and was able to successfully retrieve John's username and password.
    
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/9eb600ee-3272-4c06-a94a-93a249f89c2e)
 
-4. I went to Splunk to review the telemetry generated from this attack. Events were generated for failed login attempts by John Smith under Event Code 4625 sourced from Event Viewer: Security. The 20+ login attempts in a minute would warrant an investigation since it probably indicates a brute force attack. If the Cyber Incident Response Cycle were followed, isolating the user account and device would be next.
+4. I went to Splunk to review the telemetry generated. Events were generated for failed login attempts by John Smith under Event Code 4625 sourced from Event Viewer: Security. The 20+ login attempts in a minute would warrant an investigation since it probably indicates a brute force attack. If the Cyber Incident Response Cycle were followed, isolating the user account and device would be next.
 
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/045c196d-e4bd-411e-850d-60c1fa5df823)
 
@@ -151,4 +151,4 @@ This script was also being picked up by Windows Security in real-time.
 ![image](https://github.com/Giorojas11/Detection-Lab/assets/98496056/2c0978bc-66b0-4b9c-b552-ac97cc294d76)
 
 ## Conclusion
-With this virtual environment, I can practice Red Team (attack simulation) while simultaneously practicing Blue Team (log analysis on SIEM). My plan is to expand this homelab and continue simulating attacks and playing around with the SIEM to practice to gain hand-on experience in prepration for a SOC Analyst role.
+With this virtual environment, I can practice Red Team (attack simulation) while simultaneously practicing Blue Team (log analysis on SIEM). My plan is to continue simulating attacks and playing around with the SIEM to gain hand-on experience in prepration for a SOC Analyst role.
