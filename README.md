@@ -99,7 +99,7 @@ source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 
 ### THE ATTACK
 
-*The Scenario*: The attacker was able to tailgate into SOC's office site and proceed by doing some reconnaissance. An active ethernet port was found allowing the attacker to connect to the office network. John Smith, a new IT employee for SOC, has RDP privileges for their job-role. Being a new employee, John was given a simple password that needed to be manually changed as soon as possible.
+*The Scenario*: The attacker was able to tailgate into SOC's office site. An active ethernet port was found allowing the attacker to connect to the office network. John Smith, a new IT employee for SOC, has RDP privileges for their job-role. Being a new employee, John was given a simple password that needed to be changed as soon as possible.
 
 1. On my Kali Linux VM, I installed Crowbar, a brute force tool.
 2. I created a soc_project directory on the desktop, pulled the rockyou.txt and copied it to the directory as a new file, passwords.txt. I added the password that is used by John Smith's user account in the SOC domain. In this attack scenario, the attacker was able to gain John Smith's password.
